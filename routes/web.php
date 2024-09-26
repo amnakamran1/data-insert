@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/form', function () {
+    return view('form');
 });
 // Route::get('/form', function () {
 //     $student = Student::all();
@@ -24,3 +24,8 @@ Route::get('/', function () {
 // });
 Route::get('/form',[UserController::class, 'index']);
 Route::post('/form',[UserController::class, 'store']);
+Route::get('student-view/create/',[UserController::class, 'create'])->name('student-view.create');
+Route::get('/student/view',[UserController::class, 'view']);
+Route::get('student/delete/{id}',[UserController::class, 'delete']);
+Route::get('student/edit/{id}',[UserController::class, 'edit'])->name('student.edit');
+Route::post('student/update/{id}',[UserController::class, 'update'])->name('student.update');

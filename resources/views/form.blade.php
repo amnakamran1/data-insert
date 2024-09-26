@@ -15,7 +15,7 @@
 
 <body>
     <div class="container my-5 text-center">
-        <h1 class="text-primary">Customer Registration</h1>
+        <h1 class="text-primary">Student Registration</h1>
         <form class="my-5" action="{{ url('/') }}/form" method="post">
             @csrf
             <div class="row">
